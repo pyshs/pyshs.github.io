@@ -35,9 +35,11 @@ reviews:
    avatar: https://avatars1.githubusercontent.com/u/16726828?s=400&u=597a9cef5f4c9e7317e8c7295a29b7f22c20cf98&v=4
    review: "Je peux faire la couverture ?"
 
-more_link: TODO
-
-
+more_link: "#buy"
+viz:
+  - chap11-usages-avances_68_0.png
+  - chap11-usages-avances_78_0.png
+  - chap9-visualisation_61_0.png
 ---
 
 
@@ -113,11 +115,11 @@ more_link: TODO
 					    </div><!--//cta-holder-->
 					    
 					    <div class="hero-quotes mt-5">
-						    <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5" data-ride="carousel" data-interval="8000">
+						    <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5" data-ride="carousel" data-interval="6000">
 								<ol class="carousel-indicators">
-									<li data-target="#quotes-carousel" data-slide-to="0" class="active"></li>
-									<li data-target="#quotes-carousel" data-slide-to="1"></li>
-									<li data-target="#quotes-carousel" data-slide-to="2"></li>
+                                    {% for review in page.reviews %}
+                                        <li data-target="#quotes-carousel" data-slide-to="{{forloop.index0}}" class="{% if forloop.first == true %}active{% endif %}"></li>
+                                    {% endfor %}
 								</ol>
 							  
 							    <div class="carousel-inner">
@@ -157,8 +159,9 @@ more_link: TODO
     
     <section id="benefits-section" class="benefits-section theme-bg-light-gradient py-5">
 	    <div class="container py-5">
-		    <h2 class="section-heading text-center mb-3">What Will You Get From This Book?</h2>
-		    <div class="section-intro single-col-max mx-auto text-center mb-5">Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit consequat consequat. Orci varius natoque penatibus et magnis. </div>
+		    <h2 class="section-heading text-center mb-3">Que trouverez-vous dans ce livre ?</h2>
+		    <div class="section-intro single-col-max mx-auto text-center mb-5">Comment commencer à programmer on Python
+              pour les Science Humaines et Sociales. Une introduction à la Programation par l'example.</div>
 		    <div class="row text-center">
 			    <div class="item col-12 col-md-6 col-lg-4">
 				    <div class="item-inner p-3 p-lg-4">
@@ -177,7 +180,7 @@ more_link: TODO
 				    <div class="item-inner p-3 p-lg-4">
 					    <div class="item-header mb-3">
 						    <div class="item-icon"><i class="fab fa-python"></i></div>
-                            <h3 class="item-heading">Python 3.8, Jupyter, Pandas, Seaborn...</h3>
+                            <h3 class="item-heading">Python 3.8, Jupyter, Seaborn...</h3>
 					    </div><!--//item-heading-->
 					    <div class="item-desc">
                             Utilisations des dernières version de Python et des bibliothèques les plus connues de Python
@@ -188,44 +191,49 @@ more_link: TODO
 			    <div class="item col-12 col-md-6 col-lg-4">
 				    <div class="item-inner p-3 p-lg-4">
 					    <div class="item-header mb-3">
-						    <div class="item-icon"><i class="fab fa-rocketchat"></i></div>
-						    <h3 class="item-heading">Discover phasellus id egestas tellus maximus</h3>
+						    <div class="item-icon"><i class="fas fa-code"></i></div>
+						    <h3 class="item-heading">Minimum de code, maximum d'Examples et Bibliothèques</h3>
 					    </div><!--//item-heading-->
 					    <div class="item-desc">
-						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+						    La puissance the Python est due a ses bibliothèques, après une rapide introduction à la
+                      programmation, une apprenez directement sur de vrais jeux de données de l'insee.
 					    </div><!--//item-desc-->
 				    </div><!--//item-inner-->
 			    </div><!--//item-->
 			    <div class="item col-12 col-md-6 col-lg-4">
 				    <div class="item-inner p-3 p-lg-4">
 					    <div class="item-header mb-3">
-						    <div class="item-icon"><i class="fab fa-angular"></i></div>
-						    <h3 class="item-heading">Master aliquet augue ac ipsum lobortis interdum</h3>
+						    <div class="item-icon"><i class="fas fa-table"></i></div>
+						    <h3 class="item-heading">Manipuler les donnés Tabulaire avec Pandas</h3>
 					    </div><!--//item-heading-->
-					    <div class="item-desc">
-						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+                   <div class="item-desc">
+                       Les données tabulaires sont souvent au cœur des SHS, apprenez à utiliser pandas pour manipulera
+                       des tableaux de donnés plus rapidement et surement qu'avec un Tableur.
 					    </div><!--//item-desc-->
 				    </div><!--//item-inner-->
 			    </div><!--//item-->
 			    <div class="item col-12 col-md-6 col-lg-4">
 				    <div class="item-inner p-3 p-lg-4">
 					    <div class="item-header mb-3">
-						    <div class="item-icon"><i class="fas fa-code-branch"></i></div>
-						    <h3 class="item-heading">Deploy elementum mauris tincidunt tempus sagittis</h3>
+						    <div class="item-icon"><i class="fas fa-map-marked-alt"></i></div>
+						    <h3 class="item-heading">Faire des Cartes avec GeoPandas et Matplotlib</h3>
 					    </div><!--//item-heading-->
-					    <div class="item-desc">
-						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+                   <div class="item-desc">
+                       Pour les donnéees géographique utiliser GeoPandas et Matplotlib pour directement faire des cartes
+                       à partir de vos données.
 					    </div><!--//item-desc-->
 				    </div><!--//item-inner-->
 			    </div><!--//item-->
 			    <div class="item col-12 col-md-6 col-lg-4">
 				    <div class="item-inner p-3 p-lg-4">
 					    <div class="item-header mb-3">
-						    <div class="item-icon"><i class="fas fa-hand-holding-usd"></i></div>
-						    <h3 class="item-heading">Become mattis est et mauris tempus non imperdiet</h3>
+						    <div class="item-icon"><i class="fas fa-book-open"></i></div>
+						    <h3 class="item-heading">Analyse de text avec SpaCy</h3>
 					    </div><!--//item-heading-->
-					    <div class="item-desc">
-						    List one of your book's benefits here. Orci varius natoque penatibus et magnis dis parturient montes. 
+                   <div class="item-desc">
+                       Les données non structurées (article, tweets, interview) font partie des données collectés en
+                       SHS. Apprenez a faire de l'analyse de donnée sur ces corpus à l'aide du Traitement automatique
+                       des langues (spacy).
 					    </div><!--//item-desc-->
 				    </div><!--//item-inner-->
 			    </div><!--//item-->
@@ -238,10 +246,23 @@ more_link: TODO
 		    <div class="single-col-max mx-auto">
 		    <h2 class="section-heading text-center mb-5">Inclus</h2>
 			    <div class="row">
-				    <div class="col-12 col-md-6">
-					    <div class="figure-holder mb-5">
-						    <img class="img-fluid" src="https://mybinder.org/static/images/logo_square.png" alt="image" >
-					    </div><!--//figure-holder-->
+                 <div class="col-12 col-md-6">
+                     <div id="image-carousel" class="hero-quotes carousel slide carousel-fade mb-5" data-ride="carousel" data-interval="8000">
+                         <ol class="carousel-indicators">
+                             {% for viz in page.viz %}
+                                 <li data-target="#image-carousel" data-slide-to="{{forloop.index0}}" class="{% if forloop.first == true %}active{% endif %}"></li>
+                            {% endfor %}
+								</ol>
+							  
+							    <div class="carousel-inner">
+                            {% for viz in page.viz %} 
+								    <div class="carousel-item {% if forloop.first == true %}active{% endif %}">
+                                 <img class="img-fluid" src="assets/images/{{viz}}" />
+                            </div><!--//carousel-item-->
+                            {% endfor %}
+
+								</div><!--//carousel-inner-->
+							</div><!--//quotes-carousel-->
 				    </div><!--//col-->
 				    <div class="col-12 col-md-6 mb-5">
 					    <div class="key-points mb-4 text-center">
@@ -319,15 +340,15 @@ more_link: TODO
     </section><!--//form-section-->
     <section id="author-section" class="author-section section theme-bg-primary py-5 text-white">
 	    <div class="container py-3">
-            <h3 id='buy'>Où trouver se livre ?</h3>
+            <h3 id='buy' class='text-center'>Où trouver se livre ?</h3>
             <p>Cette Ouvrage n'est actuellement disponible seulement en version Papier, Noir et Blanc. Préférez votre
             libraire locale si possible.</p>
 
-            <ul>
-                <li><a href="https://www.parislibrairies.fr/livre/9782753581067-python-pour-les-shs-introduction-a-la-programmation-pour-le-traitement-de-donnees-schultz-bussonnier/">Trouver sur ParisLibraries.fr</a></li>
-                <li><a href="">FNAC TODO</a></li>
-                <li><a href="">AMAZON (TODO)</a></li>
-                <li><a href="https://www.librest.com/livres/python-pour-les-shs--introduction-a-la-programmation-pour-le-traitement-de-donnees-emilien-schultz_0-6844421_9782753581067.html">Librest.com</a></li>
+            <ul class='key-points-list list-unstyled mb-4 mx-auto d-inline-block text-left'>
+                <li><i class="fas fa-check-circle mr-2"></i><a href="https://www.parislibrairies.fr/livre/9782753581067-python-pour-les-shs-introduction-a-la-programmation-pour-le-traitement-de-donnees-schultz-bussonnier/">Trouver sur ParisLibraries.fr</a></li>
+                <li><i class="fas fa-check-circle mr-2"></i><a href="">FNAC TODO</a></li>
+                <li><i class="fas fa-check-circle mr-2"></i><a href="">AMAZON (TODO)</a></li>
+                <li><i class="fas fa-check-circle mr-2"></i><a href="https://www.librest.com/livres/python-pour-les-shs--introduction-a-la-programmation-pour-le-traitement-de-donnees-emilien-schultz_0-6844421_9782753581067.html">Librest.com</a></li>
             </ul>
 
             <p>Une autre source pour avoir se livre ? <a>Demandez nous TODO</a>.</p>
