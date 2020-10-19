@@ -37,9 +37,15 @@ reviews:
 
 more_link: "#buy"
 viz:
+  - chap7-visualisation_27_0.png
+  - chap7-visualisation_29_0.png
+  - chap7-visualisation_31_0.png
+  - chap7-visualisation_33_0.png
+  - chap7-visualisation_49_0.png
+  - chap7-visualisation_55_0.png
+  - chap9-usages-avances_50_0.png
   - chap11-usages-avances_68_0.png
   - chap11-usages-avances_78_0.png
-  - chap9-visualisation_61_0.png
 ---
 
 
@@ -72,6 +78,12 @@ viz:
 }
 .container.py-3 > *{ color:white;}
 .container.py-3 > ul > li > a{ color:white;}
+
+
+
+.carousel-inner {
+    min-height: 550px;
+}
 
 
 a.btn.btn-tertiary{
@@ -179,7 +191,7 @@ a.btn.btn-tertiary:hover, a.btn.btn-tertiary:active, a.btn.btn-tertiary:focus, a
             <h3 id='interactifs' class='text-center'>Les codes associés au livre</h3>
             <p>L'ensemble des codes du manuel sont disponibles en ligne. Vous pouvez aussi directement les exécuter grâce à Binder
 		    (explications sur le dépôt aussi)</p>
-            <a class="btn btn-tertiary" href="https://github.com/pyshs/exemples-manuel">Dépôt Github du manuel</a>
+            <a class="btn btn-tertiary" href="https://github.com/pyshs/exemples-manuel">Dépôt GitHub du manuel</a>
 
             <p> Des questions ou des erreurs, venez contribuer sur le dépôt GitHub du manuel.</p>
         </div>
@@ -268,11 +280,11 @@ a.btn.btn-tertiary:hover, a.btn.btn-tertiary:active, a.btn.btn-tertiary:focus, a
     
     <section id="content-section" class="content-section">
 	    <div class="container">
-		    <div class="single-col-max mx-auto">
+		    <div class="mx-auto">
 		    <h2 class="section-heading text-center mb-5">Inclus</h2>
 			    <div class="row">
                  <div class="col-12 col-md-6">
-                     <div id="image-carousel" class="hero-quotes carousel slide carousel-fade mb-5" data-ride="carousel" data-interval="8000">
+                     <div id="image-carousel" class="hero-quotes carousel slide carousel-fade mb-5" data-ride="carousel" data-interval="3000">
                          <ol class="carousel-indicators">
                              {% for viz in page.viz %}
                                  <li data-target="#image-carousel" data-slide-to="{{forloop.index0}}" class="{% if forloop.first == true %}active{% endif %}"></li>
@@ -295,6 +307,12 @@ a.btn.btn-tertiary:hover, a.btn.btn-tertiary:active, a.btn.btn-tertiary:focus, a
 							    <li><i class="fas fa-check-circle mr-2"></i>Exemples</li>
 							    <li><i class="fas fa-check-circle mr-2"></i>Essayez les premiers exemples sans installer
                                 Python.</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>Analyse en Composante principale</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>Histogrammes</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>Diagramme en bulle</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>Nuage de mots</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>Analyse de réseau</li>
+							    <li><i class="fas fa-check-circle mr-2"></i>Cartographie</li>
 						    </ul>
                             <div class="text-center"><a class="btn btn-primary" href="{{page.more_link}}">Je veux ce livre</a></div>
 					    </div><!--//key-points-->
