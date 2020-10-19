@@ -70,8 +70,15 @@ viz:
 .author-pic, .source-profile{
     border-radius: 200px;
 }
-.container.py-3 > *{ color:white}
-.container.py-3 > ul > li > a{ color:white}
+.container.py-3 > *{ color:white;}
+.container.py-3 > ul > li > a{ color:white;}
+
+a.btn.btn-tertiary, a.btn.btn-tertiary:hover, a.btn.btn-tertiary:active, a.btn.btn-tertiary:focus, a.btn.btn-tertiary:not(:disabled):not(.disabled):active {
+    background: white;
+    border: 2px solid #ed6524;
+    color: #ed6524;
+}
+
 </style>
 
 </head> 
@@ -156,11 +163,11 @@ viz:
 	    </div><!--//container-->
     </section><!--//hero-section-->
     <section id="author-section" class="author-section section theme-bg-primary py-5 text-white">
-	    <div class="container py-3">
+	    <div class="container py-3" style='text-align:center'>
             <h3 id='interactifs' class='text-center'>Où trouver ce livre ?</h3>
             <p>Le manuel est actuellement disponible en version papier (noir et blanc). Préférez votre
             libraire locale si possible.</p>
-            <a class="btn btn-secondary" href="#buy">Je veux ce livre</a>
+            <a class="btn btn-tertiary" href="#buy">Je veux ce livre</a>
         </div>
     </section>
     
