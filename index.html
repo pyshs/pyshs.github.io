@@ -22,7 +22,8 @@ authors:
      - twitter: https://twitter.com/mbussonn
      - github-alt: http://github.com/Carreau
 reviews:
- - name: Camille Carvalho
+ - name: KamsBlog
+   url: https://www.instagram.com/kamsblog/
    role: Illustratrice
    avatar: https://avatars1.githubusercontent.com/u/16726828?s=400&u=597a9cef5f4c9e7317e8c7295a29b7f22c20cf98&v=4
    review: "Je peux faire la couverture ?"
@@ -85,7 +86,7 @@ viz:
 
 
 
-.carousel-inner {
+.carousel-inner-images {
     min-height: 550px;
 }
 
@@ -164,7 +165,11 @@ a.btn.btn-tertiary:hover, a.btn.btn-tertiary:active, a.btn.btn-tertiary:focus, a
 								        <div class="source media flex-column flex-md-row align-items-center">
                                             <img class="source-profile mr-md-3" src="{{review.avatar}}" alt="image" >
 									        <div class="source-info media-body text-center text-md-left">
+                                                {% if review.url %}
+                                                <div class="source-name"><a href={{review.url}}>{{review.name}}</a></div>
+                                                {% else %}
                                                 <div class="source-name">{{review.name}}</div>
+                                                {% endif %}
                                                 <div class="soure-title">{{review.role}}</div>
 										    </div>
 								        </div><!--//source-->
@@ -293,14 +298,14 @@ a.btn.btn-tertiary:hover, a.btn.btn-tertiary:active, a.btn.btn-tertiary:focus, a
                             {% endfor %}
 								</ol>
 							  
-							    <div class="carousel-inner">
+							    <div class="carousel-inner-images">
                             {% for viz in page.viz %} 
 								    <div class="carousel-item {% if forloop.first == true %}active{% endif %}">
                                  <img class="img-fluid" src="assets/images/{{viz}}" />
                             </div><!--//carousel-item-->
                             {% endfor %}
 
-								</div><!--//carousel-inner-->
+								</div><!--//carousel-inner-images-->
 							</div><!--//quotes-carousel-->
 				    </div><!--//col-->
 				    <div class="col-12 col-md-6 mb-5">
